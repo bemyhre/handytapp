@@ -10,5 +10,6 @@ class SessionsController < ApplicationController
   	else
   		flash.now.alert = "Invalid credentials"
   		render "new"
+  	end
   end
 end
