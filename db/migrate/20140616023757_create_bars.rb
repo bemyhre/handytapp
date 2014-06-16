@@ -7,7 +7,6 @@ class CreateBars < ActiveRecord::Migration
       t.string :zip
       t.string :grade
       t.string :coordinates
-
       t.timestamps
     end
   end
