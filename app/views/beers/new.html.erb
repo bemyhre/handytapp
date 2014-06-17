@@ -1,0 +1,35 @@
+<h1>Add a new Beer</h1>
+
+<%= form_for @beer do |f|%>
+  <% if @beer.errors.any? %>
+	  <div class="error messages">
+	  	<h2>Form is invalid</h2>
+	  	<ul>
+	  		<% for message in @beer.errors.full_messages %>
+	  		  <li><%=message%></li>
+	  		<%end%>
+	  	</ul>
+	  </div>
+	<%end%>
+
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :style%>
+		<%= f.text_field :style%>
+	</p>
+	
+	<p>
+		<%= f.label :rating%>
+		<%= f.text_field :rating%>
+	</p>
+
+	<p>
+		<%= collection_select(:beer, :brewery_id, @breweries, :id, :name, {:prompt => false })  %>
+	</p>
+
+	<p class="button"><%= f.submit %></p>
+<%end%>
