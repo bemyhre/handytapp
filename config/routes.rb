@@ -1,6 +1,8 @@
 Handytapp::Application.routes.draw do
 
 
+  get "styles/new"
+
   get "beers/new"
 
   get "sign_up" => "users#new", :as => "sign_up"
