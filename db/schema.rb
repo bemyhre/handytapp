@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(:version => 20140618021322) do
   end
 
   create_table "beers", :force => true do |t|
+    t.integer  "style_id"
     t.integer  "brewery_id"
     t.string   "name"
-    t.string   "style"
     t.float    "rating"
     t.string   "image"
     t.datetime "created_at", :null => false

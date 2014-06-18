@@ -16,15 +16,14 @@
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	</p>
-
-	<p>
-		<%= f.label :style%>
-		<%= f.text_field :style%>
-	</p>
 	
 	<p>
 		<%= f.label :rating%>
 		<%= f.text_field :rating%>
+	</p>
+	
+	<p>
+		<%= collection_select(:beer, :style_id, @styles, :id, :style_name, {:prompt => false })  %>
 	</p>
 
 	<p>

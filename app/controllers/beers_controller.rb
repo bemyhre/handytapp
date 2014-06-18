@@ -2,6 +2,7 @@ class BeersController < ApplicationController
   def new
   	@beer=Beer.new
   	@breweries = Brewery.all
+  	@styles = Style.all
   end
 
   def create
