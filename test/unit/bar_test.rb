@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BarTest < ActiveSupport::TestCase
+class BarsTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
