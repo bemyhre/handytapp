@@ -1,6 +1,10 @@
 Handytapp::Application.routes.draw do
 
 
+  get "bar/new"
+
+  get "bar/create"
+
   get "styles/new"
 
   get "beers/new"
