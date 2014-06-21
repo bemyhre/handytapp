@@ -1,0 +1,41 @@
+<h1>Add a new Bar</h1>
+
+<%= form_for @bar do |f|%>
+  <% if @bar.errors.any? %>
+	  <div class="error messages">
+	  	<h2>Form is invalid</h2>
+	  	<ul>
+	  		<% for message in @bar.errors.full_messages %>
+	  		  <li><%=message%></li>
+	  		<%end%>
+	  	</ul>
+	  </div>
+	<%end%>
+
+	<p>
+		<%= f.label :bar_name %>
+		<%= f.text_field :name %>
+	</p>
+		<p>
+		<%= f.label :address%>
+		<%= f.text_field :address%>
+	</p>
+
+	<p>
+		<%= f.label :city%>
+		<%= f.text_field :city%>
+	</p>
+
+	<p>
+		<%= f.label :state%>
+		<%= f.text_field :state%>
+	</p>
+	
+	<p>
+		<%= f.label :zip%>
+		<%= f.text_field :zip%>
+	</p>
+	
+
+	<p class="button"><%= f.submit %></p>
+<%end%>
