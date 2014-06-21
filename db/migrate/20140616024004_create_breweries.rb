@@ -7,7 +7,6 @@ class CreateBreweries < ActiveRecord::Migration
       t.string :zip
       t.float :rating
       t.string :coordinates
-
       t.timestamps
     end
   end
