@@ -1,9 +1,7 @@
 Handytapp::Application.routes.draw do
 
 
-  get "bar/new"
-
-  get "bar/create"
+  get "bars/new"
 
   get "styles/new"
 
@@ -19,6 +17,7 @@ Handytapp::Application.routes.draw do
   resources :sessions
   resources :beers
   resources :breweries
+  resources :bars
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

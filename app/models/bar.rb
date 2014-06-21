@@ -4,7 +4,7 @@ class Bar < ActiveRecord::Base
   geocoded_by :all_addresses
   after_validation :geocode
 
-  def :all_addresses
+  def all_addresses
   	"#{address} #{city} #{state} #{zip}"
   end 
 end
