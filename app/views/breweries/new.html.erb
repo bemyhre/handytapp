@@ -1,2 +1,42 @@
-<h1>Breweries#new</h1>
-<p>Find me in app/views/breweries/new.html.erb</p>
+<h1>Add a new Brewery</h1>
+
+<%= form_for @brewery do |f|%>
+  <% if @brewery.errors.any? %>
+	  <div class="error messages">
+	  	<h2>Form is invalid</h2>
+	  	<ul>
+	  		<% for message in @brewery.errors.full_messages %>
+	  		  <li><%=message%></li>
+	  		<%end%>
+	  	</ul>
+	  </div>
+	<%end%>
+
+	<p>
+		<%= f.label :brewery_name %>
+		<%= f.text_field :name %>
+	</p>
+		<p>
+		<%= f.label :address%>
+		<%= f.text_field :address%>
+	</p>
+
+	<p>
+		<%= f.label :city%>
+		<%= f.text_field :city%>
+	</p>
+
+	<p>
+		<%= f.label :state%>
+		<%= f.text_field :state%>
+	</p>
+	
+	<p>
+		<%= f.label :zip%>
+		<%= f.text_field :zip%>
+	</p>
+	
+
+	<p class="button"><%= f.submit %></p>
+<%end%>
+
