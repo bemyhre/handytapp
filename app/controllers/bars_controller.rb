@@ -1,4 +1,15 @@
 class BarsController < ApplicationController
+
+  def index
+  	@bars=Bar.all
+    if cookies[:lat_lng]==nil
+      cookies[:lat_lng]="46.8744076|-96.7879381"
+    end
+    @lat_lng = cookies[:lat_lng].split("|")
+    @lat = @lat_lng[0]
+    @long = @lat_lng[1]
+  end
+
   def new
   	@bar=Bar.new
   end
@@ -11,4 +22,5 @@ class BarsController < ApplicationController
   		render "new"
   	end
   end
+
 end

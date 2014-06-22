@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def new
   	@user=User.new
-    @lat_lng = cookies[:lat_lng].split("|")
   end
 
   def create
