@@ -8,6 +8,8 @@ class BarsController < ApplicationController
     @lat_lng = cookies[:lat_lng].split("|")
     @lat = @lat_lng[0]
     @long = @lat_lng[1]
+    @client = GooglePlaces::Client.new(ENV['PLACES_API'])
+    puts @client.spots(@lat,@long, :types => 'bar').inspect
   end
 
   def new
