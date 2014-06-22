@@ -9,6 +9,8 @@ gem 'pg'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'google_places'
+gem 'figaro'
 
 
 # Gems used only for assets and not required
