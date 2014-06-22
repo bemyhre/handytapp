@@ -7,6 +7,8 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 
 # Gems used only for assets and not required
