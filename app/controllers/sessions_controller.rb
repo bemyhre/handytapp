@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   	user = User.authenticate(params[:email], params[:password])
   	if user
   		session[:id] = user.id
-  		redirect_to root_url, :notice => "Logged in!"
+  		redirect_to root_url#, :notice => "Logged in!"
   	else
   		flash.now.alert = "Invalid credentials"
   		render "new"
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   def destroy
   	session[:id] = nil
     cookies.delete(:lat_lng)
-  	redirect_to root_url, :notice => "Logged out!"
+  	redirect_to root_url#, :notice => "Logged out!"
   end
 end
 

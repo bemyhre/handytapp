@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  height:100%;
+  width: 100%;
+
+}
+
+#container {
+	width: 100%;
+	height: 100%
+}
+#user_nav {
+	text-align: center;
+	z-index: 100;
+	position: absolute;
+	margin-left: 
+}
+
+#map {
+  height:100%;
+  width:100%;
+  position: absolute;
+}
+
+#login, #signup {
+	position: absolute;
+	margin-top: 175px;
+}
+
+
