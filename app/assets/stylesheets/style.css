@@ -22,7 +22,7 @@ html, body {
   position: absolute;
 }
 
-#login, #signup {
+#login, #signup, #new_bar {
 	position: absolute;
 	margin-top: 175px;
 }
